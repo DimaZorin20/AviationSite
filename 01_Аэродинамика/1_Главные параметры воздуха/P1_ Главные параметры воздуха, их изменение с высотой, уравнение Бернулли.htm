@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главные параметры воздуха, их изменение с высотой, уравнение Бернулли</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fcfcfc;
+        }
+        h1, h2 {
+            color: #0b5ed7;
+        }
+        h1 {
+            border-bottom: 2px solid #0b5ed7;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 40px;
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .formula {
+            text-align: center;
+            font-size: 1.3em;
+            background-color: #f1f3f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        figure {
+            text-align: center;
+            margin: 30px 0;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        figcaption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .end-article-questions {
+            background-color: #e8f4fd;
+            border-left: 5px solid #0b5ed7;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 40px;
+        }
+        .end-article-questions ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .formula {
+            text-align: center;
+            font-size: 1.4em;
+            background-color: #f1f3f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: 'Times New Roman', Times, serif; /* Классический шрифт для формул */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            vertical-align: middle;
+            margin: 0 5px;
+        }
+
+        .numerator {
+            border-bottom: 2px solid #333;
+            padding: 0 5px 2px 5px;
+            font-style: italic; /* Переменные обычно пишутся курсивом */
+        }
+
+        .denominator {
+            padding: 2px 5px 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- НАВИГАЦИЯ НАЧАЛО -->
+    <div style="background-color: #e9ecef; padding: 12px 20px; border-radius: 8px; margin-bottom: 25px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 0.95em; display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin-left: auto; margin-right: auto; box-sizing: border-box;">
+        <a href="../../index.html" style="text-decoration: none; color: #0b5ed7; font-weight: bold; transition: color 0.2s;">🏠 В главное меню</a>
+        <span style="color: #6c757d;">P1: Private pilot license (A)</span>
+    </div>
+    <!-- НАВИГАЦИЯ КОНЕЦ -->
+    <h1>Главные параметры воздуха, их изменение с высотой, уравнение Бернулли</h1>
+
+    <div class="ptd-article">
+        <h2>Главные параметры воздуха, их изменение с высотой</h2>
+
+        <p>Главными параметрами воздуха являются <strong>давление</strong>, <strong>температура</strong> и <strong>плотность</strong>.</p>
+
+        <p><strong>Давление</strong> это сила, действующая на единицу площади и перпендикулярная ей. Обозначается обычно буквой <strong>(P)</strong>, измеряется в килограммах на единицу площади (кг/м<sup>2</sup>, кг/см<sup>2</sup>).</p>
+
+        <p><strong>Температура</strong> это мера нагретости тела, определяющая скорость хаотического движения молекул. Измеряется <strong>(t)</strong> в градусах Цельсия, Кельвина или Фаренгейта.</p>
+
+        <p><strong>Плотность</strong>. В аэродинамике под понятием <u>плотности</u> обычно понимают <u>массовую плотность</u>. Она характеризует кинетическую энергию молекул воздуха. Обозначается буквой <b>ρ</b> (читается ро). Массовая плотность — это масса воздуха, содержащаяся в объеме 1 м<sup>3</sup>.</p>
+
+        <p>Поверхность Земли окружена воздушной оболочкой, которая называется атмосферой. Атмосфера в зависимости от закона изменения параметров воздуха с высотой делится на несколько слоев. Для каждого слоя характерны постоянные закономерности изменения параметров воздуха. Однако абсолютные значения этих параметров значительно меняются, что приводит к изменению плотности воздуха и, в свою очередь, летных характеристик самолетов. Поэтому, для сравнения летных характеристик, полученных в различных атмосферных условиях, возникла необходимость создания <strong>международной стандартной атмосферы (МСА) (the International Standard Atmosphere (ISA))</strong>, полученной на основе обработки результатов среднегодовых измерений параметров воздуха.</p>
+
+        <p>За начало отсчета высоты в МСА принят уровень мирового океана со следующими значениями параметров воздуха:</p>
+
+        <ul>
+            <li>давление 101 325 Па (760 мм рт. ст.);</li>
+            <li>температура 288 К (+15 °С);</li>
+            <li>плотность 1,225 кг/м<sup>3</sup> (0,125 кгс * c<sup>2</sup>/м<sup>4</sup>).</li>
+        </ul>
+
+        <p>В ближайшем к поверхности слое атмосферы – тропосфере, которая простирается до высоты 11 000 м, температура уменьшается на 6,5° с подъемом на каждые 1000 м. Однако из-за более интенсивного уменьшения давления плотность воздуха также уменьшается. С высоты 11 000 м начинается стратосфера, в которой температура воздуха с увеличением высоты остается постоянной, а давление продолжает уменьшаться. В результате уменьшение плотности становится более интенсивным.</p>
+
+        <figure>
+            <!-- Замените имя файла ниже на ваше локальное, если оно отличается -->
+            <img src="P1_%20%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5%20%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B%20%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85%D0%B0,%20%D0%B8%D1%85%20%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%20%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%BE%D0%B9,%20%D1%83%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%91%D0%B5%D1%80%D0%BD%D1%83%D0%BB%D0%BB%D0%B8_files/e32dc3ec-a0f2-45e4-9f60-5ef7fbd30e8e_DLDK.jpg" width="600" alt="Рис. 1. Изменение давления и температуры с высотой">
+            <figcaption>Рис. 1. Изменение давления и температуры с высотой</figcaption>
+        </figure>
+
+        <h2>Уравнение Бернулли</h2>
+
+        <p>В аэродинамике частным случаем закона сохранения энергии является <strong>уравнение Бернулли (Bernulli’s Principle)</strong></p>
+
+        <p class="formula">
+            p + 
+            <span class="fraction">
+                <span class="numerator">ρV²</span>
+                <span class="denominator">2</span>
+            </span> 
+            = const
+        </p>
+
+        <p>Уравнение является одним из основных уравнений аэродинамики малых скоростей, когда воздух можно считать несжимаемой средой. Из уравнения можно сделать вывод о том, что в несжимаемом потоке скорость и давление связаны обратной зависимостью. Слагаемые в левой части этого уравнения имеют размерности давления, поэтому они носят следующие названия: <em>p</em> – статическое давление; (ρV²)/2 – динамическое давление или скоростной напор.</p>
+
+        <p><strong>ρ</strong> - массовая плотность воздуха;</p>
+        <p><strong>V</strong> - скорость потока.</p>
+
+        <p>Чтобы представить физический смысл величин, входящих в уравнение Бернулли, можно рассмотреть течение жидкости в трубе (рис. 2).</p>
+
+        <figure>
+            <!-- Замените имя файла ниже на ваше локальное, если оно отличается -->
+            <img src="P1_%20%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5%20%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B%20%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85%D0%B0,%20%D0%B8%D1%85%20%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%20%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%BE%D0%B9,%20%D1%83%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%91%D0%B5%D1%80%D0%BD%D1%83%D0%BB%D0%BB%D0%B8_files/bernulli%20(2)_DLDK.jpg" width="450" alt="Рис. 2. Иллюстрация уравнения Бернулли">
+            <figcaption>Рис. 2. Иллюстрация уравнения Бернулли</figcaption>
+        </figure>
+
+        <p>Сумма <strong>статического</strong> и <strong>динамического давления</strong> в различных сечениях неразрывного потока есть <u>величина постоянная</u>, то есть с уменьшением сечения увеличивается скорость потока и падает статическое давление и наоборот.</p>
+
+        <p>Для наглядности можно провести опыт. Взять два листка бумаги, держа параллельно друг другу на небольшом расстоянии, подуть в промежуток между ними. Листы сближаются. Причиной их сближения является то, что с внешней стороны листов давление атмосферное, а в промежутке между ними вследствие наличия скоростного напора воздуха давление уменьшилось и стало меньше атмосферного. Под действием разности давлений листки бумаги прогибаются вовнутрь.</p>
+
+        <p>Сумму p + <span class="fraction">
+                <span class="numerator">ρV²</span>
+                <span class="denominator">2</span>
+            </span>  часто называют полным давлением и обозначают <em>p<sub>0</sub></em>.</p>
+
+        <h2>Вопросы для самопроверки</h2>
+
+        <div class="end-article-questions">
+            <ol>
+                <li>Дайте понятие основных параметров воздуха.</li>
+                <li>Дайте характеристику международной стандартной атмосферы.</li>
+                <li>Назовите закономерности изменения параметров воздуха с высотой.</li>
+                <li>На основе какого закона физики выводится уравнение Бернулли?</li>
+                <li>Объясните взаимосвязь статического и динамического давления.</li>
+            </ol>
+        </div>
+    </div>
+
+</body>
+</html>
