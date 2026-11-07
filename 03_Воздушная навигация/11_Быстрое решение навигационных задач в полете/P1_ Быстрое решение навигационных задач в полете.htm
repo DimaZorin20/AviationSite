@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Быстрое решение навигационных задач в полете</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fcfcfc;
+        }
+        h1, h2 {
+            color: #0b5ed7;
+        }
+        h1 {
+            border-bottom: 2px solid #0b5ed7;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 40px;
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        h3, h4, h5 {
+            color: #0b5ed7;
+            margin-top: 30px;
+        }
+        .formula {
+            text-align: center;
+            font-size: 1.4em;
+            background-color: #f1f3f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            vertical-align: middle;
+            margin: 0 5px;
+        }
+        .numerator {
+            border-bottom: 2px solid #333;
+            padding: 0 5px 2px 5px;
+            font-style: italic;
+        }
+        .denominator {
+            padding: 2px 5px 0 5px;
+        }
+        figure {
+            text-align: center;
+            margin: 30px 0;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        figcaption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .end-article-questions {
+            background-color: #e8f4fd;
+            border-left: 5px solid #0b5ed7;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 40px;
+        }
+        .end-article-questions ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .alert {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border-left: 5px solid;
+        }
+        .alert-warning {
+            background-color: #fff3cd;
+            border-color: #ffc107;
+        }
+        .alert-primary {
+            background-color: #cfe2ff;
+            border-color: #0b5ed7;
+        }
+        .alert-danger {
+            background-color: #f8d7da;
+            border-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+<!-- НАВИГАЦИЯ НАЧАЛО -->
+<div style="background-color: #e9ecef; padding: 12px 20px; border-radius: 8px; margin-bottom: 25px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 0.95em; display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin-left: auto; margin-right: auto; box-sizing: border-box;">
+    <a href="../../index.html" style="text-decoration: none; color: #0b5ed7; font-weight: bold; transition: color 0.2s;">🏠 В главное меню</a>
+    <span style="color: #6c757d;">P1: Private pilot license (A)</span>
+</div>
+<!-- НАВИГАЦИЯ КОНЕЦ -->
+    <h1>Быстрое решение навигационных задач в полете</h1>
+
+    <div class="ptd-article">
+        <h2>Быстрое решение навигационных задач в полете</h2>
+
+        <blockquote>
+            Ментальная математика является важным инструментарием в арсенале любого пилота. Умение оперативно вычислять время пролёта ППМ, угол сноса и расход топлива по маршруту является необходимым процессом для грамотного выполнения полёта. Важна не точность, а скорость и адекватность полученных результатов.
+        </blockquote>
+
+        <h2>Расчет времени, скорости и расстояния</h2>
+
+        <p>Для большинства самолетов принятая единица измерения скорости - узлы (kt — knots). <b>Для перевода узлов в километры в час</b> пользуются следующим правилом:</p>
+
+        <p class="formula">км/ч = (kt * 2) - 10%</p>
+
+        <p>Также это правило применимо <b>для перевода морских милей (NM — nautical miles) в километры</b>:</p>
+
+        <p class="formula">км = (NM * 2) - 10%</p>
+
+        <p>Помимо этого, для более удобного и простого расчета рекомендуется <b>перевести км/ч в км/мин</b>:</p>
+
+        <p class="formula">
+            км/мин =
+            <span class="fraction">
+                <span class="numerator">км/ч</span>
+                <span class="denominator">60</span>
+            </span>
+        </p>
+
+        <p>Чтобы каждый раз не выполнять непростой перевод км/ч в км/мин <b>важно помнить следующие соотношения</b>:</p>
+
+        <ul>
+            <li>120 км/ч = 2 км/мин;</li>
+            <li>150 км/ч = 2,5 км/мин;</li>
+            <li>180 км/ч = 3 км/мин;</li>
+            <li>210 км/ч = 3,5 км/мин;</li>
+        </ul>
+
+        <p>Основные формулы для вычисления расстояния <b>(S)</b>, времени <b>(t)</b> и путевой скорости <b>(W)</b> выглядят следующим образом:</p>
+
+        <p class="formula">S = W * t</p>
+
+        <p class="formula">
+            t =
+            <span class="fraction">
+                <span class="numerator">S</span>
+                <span class="denominator">W</span>
+            </span>
+        </p>
+
+        <p class="formula">
+            W =
+            <span class="fraction">
+                <span class="numerator">S</span>
+                <span class="denominator">t</span>
+            </span>
+        </p>
+
+        <div class="alert alert-warning">В расчете используется <b>путевая скорость, а не истинная</b> воздушная скорость.</div>
+
+        <p>Для расчета путевой скорости необходимо <b>прибавить попутную или вычесть встречную составляющую ветра (U<sub>x</sub>)</b> из значения истинной воздушной скорости:</p>
+
+        <p class="formula">W = V<sub>ист</sub> ± U<sub>x</sub></p>
+
+        <h2>Расчет топлива</h2>
+
+        <p>Прежде всего необходимо определить <b>часовой расход топлива</b>:</p>
+
+        <p class="formula">
+            Часовой расход =
+            <span class="fraction">
+                <span class="numerator">Израсходованное топливо</span>
+                <span class="denominator">Время с момента взлета</span>
+            </span>
+        </p>
+
+        <div class="alert alert-primary">Рекомендуется запомнить часовой расход на Вашем профильном ВС. Как правило, эта величина практически не меняется.</div>
+
+        <p>Имея часовой расход топлива, можно рассчитать <b>оставшееся время полета</b>:</p>
+
+        <p class="formula">
+            Оставшееся время =
+            <span class="fraction">
+                <span class="numerator">Оставшееся топливо</span>
+                <span class="denominator">Часовой расход</span>
+            </span>
+        </p>
+
+        <p>Также можно рассчитать <b>требуемое количество топлива на полет</b>:</p>
+
+        <p class="formula">Требуемое топливо = Часовой расход * Время полета</p>
+
+        <div class="alert alert-danger">Для двух приведенных выше формул важно помнить, что существует <b>невырабатываемый остаток топлива</b>, который <b>не должен учитываться</b> в расчетах.</div>
+
+        <h2>Расчет поправки на ветер</h2>
+
+        <p>По причине ветра для выдерживания заданного курса полета необходимо вносить в него поправку на величину угла сноса. <b>На угол сноса влияет</b>:</p>
+        <ul>
+            <li><b>истинная скорость полета</b> - чем V<sub>ист</sub> больше, тем меньше становится угол сноса (рис. 1);</li>
+            <li><b>боковая составляющая ветра (U<sub>z</sub>)</b> - чем больше U<sub>z</sub>, тем больше становится угол сноса (рис. 2);</li>
+        </ul>
+
+        <figure>
+            <img src="P1_%20%D0%91%D1%8B%D1%81%D1%82%D1%80%D0%BE%D0%B5%20%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%D0%B2%D0%B8%D0%B3%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D1%85%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%20%D0%B2%20%D0%BF%D0%BE%D0%BB%D0%B5%D1%82%D0%B5_files/%D0%91%D0%B5%D0%B7%20%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8-2_Sb-B.png" width="600">
+            <figcaption>Рис. 1. Влияние истинной скорости на угол сноса</figcaption>
+        </figure>
+
+        <figure>
+            <img src="P1_%20%D0%91%D1%8B%D1%81%D1%82%D1%80%D0%BE%D0%B5%20%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%D0%B2%D0%B8%D0%B3%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D1%85%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%20%D0%B2%20%D0%BF%D0%BE%D0%BB%D0%B5%D1%82%D0%B5_files/%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8-1%20(2)_Sb-B.png" width="600">
+            <figcaption>Рис. 2. Влияние боковой составляющей ветра на угол сноса</figcaption>
+        </figure>
+
+        <p>Как правило, поправка к курсу рассчитывается при полете по маршруту, когда полет до следующего <abbr title="Поворотного пункта маршрута">ППМ</abbr>, расположенного на значительном расстоянии, выполняется путем выдерживания <abbr title="Заданного магнитного путевого угла">ЗМПУ</abbr>. При полете по маршруту можно считать, что <b>истинная скорость остается постоянной</b> и для легкомоторных самолетов находится в пределах <b>190 ... 230 км/ч</b>. Для этих диапазонов скоростей <b>угол сноса</b> (УС) <b>может быть рассчитан следующим способом</b>:</p>
+
+        <p class="formula">
+            УС =
+            <span class="fraction">
+                <span class="numerator">U<sub>z</sub> (в узлах)</span>
+                <span class="denominator">2</span>
+            </span>
+        </p>
+
+        <h2>Задачи на счет в уме</h2>
+
+        <div class="end-article-questions">
+            <ol>
+                <li>Самолет летит с путевой скоростью 117 узлов. Переведите эту скорость в км/ч.</li>
+                <li>За какое время этот самолет пролетит 35 км?</li>
+                <li>Сколько топлива за это время израсходует самолет, если часовой расход составляет 6 галл/ч?</li>
+                <li>На сколько полных часов полета хватит бака объемом 34 галлона с таким расходом?</li>
+                <li>На сколько градусов и в какую сторону необходимо сделать поправку к курсу на этом самолете, если строго боковой ветер 10 узлов дует в левый борт?</li>
+            </ol>
+        </div>
+    </div>
+
+</body>
+</html>
